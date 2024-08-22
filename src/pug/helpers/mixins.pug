@@ -1,0 +1,21 @@
+mixin menu
+    a.header_title
+        img(src="img/logo.png" alt="")
+        h2.header_line_text MISOCIAL
+    .header-subtitle
+        a.header_line_subtitle__link(href="#") Home
+        a.header_line_subtitle__link(href="#")  Why MISOCIAL
+        a.header_line_subtitle__link(href="#") Features
+        a.header_line_subtitle__link(href="#") Articles
+        a.header_line_subtitle__link(href="#") Pricing
+        a.header_line_subtitle__link(href="#" class="button") GET STARTED
+
+mixin card(altText, imagePath, price)
+    a(href="#")
+        figure.main_theme_islands_item_free
+            img.main_theme_islands_item_free_icons(src=imagePath, alt=altText)
+            figcaption
+                p.main_theme_islands_item_free_title  personal
+                p.main_theme_islands_item_free_price  $#{price}/month
+                p.main_theme_islands_item_free_text  Lorem ipsum dolor sit amet.Labore et dolore magna aliqua.quis nostrud exercitation ullamco laboris.
+                a.main_theme_islands_item_free_buy(href="#") select plan

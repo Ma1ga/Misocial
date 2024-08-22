@@ -1,0 +1,486 @@
+@import helpers/vars
+@import helpers/mixins
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    text-decoration: none
+
+.header
+    background: linear-gradient(60deg, rgba(113,86,224, .8), rgba(134,198,208, .8)), url(../img/header-background.jpg)
+    kground-size: cover
+    background-position: centerbac
+.wrapper
+    +media(320px)
+        flex-direction: column
+.header_line
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 30px
+    +media(320px)
+        flex-direction: column
+    +media(768px)
+        flex-direction: column
+    +media(1024px)
+        flex-direction: unset
+.header_line_burger-menu
+    +media(320px)
+        position: absolute
+        top: 8px
+        left: 20px
+        width: 25px
+        height: 20px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        +media(768px)
+            display: none
+        span
+            display: block
+            width: 100%
+            height: 2px
+            background-color: #fff
+            transition: 0.3s
+.header_line_burger-menu_active
+    +media(768px)
+        display: none
+
+.header_line_burger-menu.header_line_burger-menu_active
+    span:first-child
+        position: absolute
+        top: 50%
+        transform: rotate(45deg)
+
+    span:nth-child(2)
+        opacity: 0
+
+    span:last-child
+        position: absolute
+        top: 50%
+        transform: rotate(-45deg)
+
+.header_line__title
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: 17px
+    color: #fff
+    +media(320px)
+        flex-direction: column
+        margin-bottom: 20px
+    +media(1024px)
+        flex-direction: unset
+    &
+        font-family: "Maven Pro"
+        font-weight: 700
+
+.footer_logo
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: 17px
+    color: #fff
+.wrapper
+    margin: auto
+
+.header_line__subtitle
+    display: flex
+    gap: 27px
+    align-items: center
+    +media(320px)
+        flex-direction: column
+    +media(768px)
+        flex-direction: row
+        gap: 28px
+    +media(1024px)
+        gap: 27px
+
+    .header_line__link
+        font-size: 16px
+        line-height: 19px
+        color: #fff
+        font-weight: 500
+        font-family: "Maven Pro"
+        text-decoration: none
+        position: relative
+        &:not(:last-child)::before
+            content: ''
+            position: absolute
+            bottom: -13px
+            left: 50%
+            transition: 0.3s
+            transform: translateX(-50%)
+            background-color: #fff
+            height: 2px
+            width: 0
+        &:hover::before
+            width: 110%
+
+    .title_footer
+        display: flex
+        gap: 27px
+        align-items: center
+
+    a
+        font-size: 16px
+        line-height: 19px
+        color: #fff
+        font-weight: 500
+        font-family: "Maven Pro"
+        text-decoration: none
+.button
+    border: 2px solid #fff
+    border-radius: 25px
+    padding: 12px 30px
+    align-items: center
+    &:hover
+        background-color: #dadade
+        color: #000
+        transition: 0.5s
+
+.header_theme
+    padding: 50px 50px
+    margin-bottom: 75px
+
+.header_theme__text
+    display: flex
+    flex-direction: column
+    text-align: center
+    +media(320px)
+        gap: 15px
+
+.header_theme__title
+    font-size: 14px
+    letter-spacing: 1px
+    line-height: 32px
+    text-transform: uppercase
+    color: #fff
+    font-weight: 700
+    font-family: "Maven Pro"
+    &:before
+        content: ''
+        position: absolute
+        top: 50%
+        left: -10px
+        width: 24px
+        height: 1px
+        background-color: #fff
+
+    &:after
+        content: ''
+        position: absolute
+        top: 50%
+        right: -10px
+        width: 24px
+        height: 1px
+        background-color: #fff
+
+.header_theme__logo
+    height: 112px
+    font-size: 86px
+    letter-spacing: -3px
+    line-height: 72px
+    color: #fff
+    font-weight: 500
+    font-family: "Maven Pro"
+    text-align: center
+    +media(320px)
+        height: 155px
+        line-height: 72px
+        align-items: center
+        justify-content: center
+        display: flex
+
+.header_theme__sub-title
+    height: 48px
+    font-size: 16px
+    line-height: 28px
+    color: #fff
+    font-weight: 400
+    font-family: "Maven Pro"
+
+.header_sub_arrow
+    text-align: center
+    margin: 60px
+
+main
+    background-color: #fff
+
+.main_button_plan
+    display: flex
+    flex-direction: column
+    text-align: center
+    margin: 60px
+
+.main_button_plan_title
+    font-size: 14px
+    letter-spacing: 1px
+    line-height: 32px
+    text-transform: uppercase
+    font-weight: 700
+    font-family: "Maven Pro"
+
+.main_button_plan_logo
+    font-size: 60px
+    letter-spacing: -2px
+    line-height: 72px
+    color: #4f4f6f
+    font-weight: 500
+    font-family: "Maven Pro"
+    text-align: center
+
+.main_button_plan_sub-title
+    font-size: 16px
+    line-height: 28px
+    color: #9fa4af
+    font-weight: 400
+    font-family: "Maven Pro"
+    text-align: center
+    text-decoration: none
+
+.main_theme
+    display: flex
+    flex-direction: row
+    gap: 47px
+    margin: 60px
+    +media(320px)
+        flex-direction: column
+        align-items: center
+
+    +media(1024px)
+        flex-direction: row
+
+figure.main_theme_islands_item_free
+    width: 25%
+    padding: 25px
+    text-align: center
+    flex-direction: column
+
+    filter: drop-shadow(0 0 46px rgba(204,204,223,0.71))
+    border-radius: 25px
+    border: 0.5px solid #c0c0c0
+    +media(320px)
+        width: 130%
+    +media(768px)
+        width: 100%
+
+    &:hover
+        filter: drop-shadow(0 0 46px rgba(204,204,223,0.71))
+        background-color: #ffffff
+        transition: 0.3s
+
+    .main_theme_islands_item_free_icons
+        margin: 15px
+        height: 100px
+        width: 120px
+
+    p
+        text-decoration: none
+        margin: 30px
+
+    .main_theme_islands_item_free_title
+        font-size: 14px
+        letter-spacing: 1px
+        line-height: 32px
+        text-transform: uppercase
+        color: #9fa4af
+        font-weight: 700
+        font-family: "Maven Pro"
+
+    .main_theme_islands_item_free_price
+        font-size: 30px
+        letter-spacing: -2px
+        line-height: 72px
+        color: #4f4f6f
+        font-weight: 500
+        font-family: "Maven Pro"
+        text-align: center
+
+    .main_theme_islands_item_free_text
+        font-size: 16px
+        line-height: 28px
+        color: #9fa4af
+        font-weight: 400
+        font-family: "Maven Pro"
+        text-align: center
+
+    .main_theme_islands_item_free_buy
+        padding: 20px 53px
+        font-size: 12px
+        letter-spacing: 1px
+        line-height: 32px
+        text-transform: uppercase
+        color: #c2c9db
+        font-weight: 700
+        font-family: "Maven Pro"
+        text-align: center
+        background-color: #ffffff
+        border: 1px solid #d7dbe8
+        border-radius: 25px
+        &:hover
+            background-color: #6e45e2
+            color: #fff
+            transition: 0.5s
+
+.main_text-maps
+    padding: 170px 0
+    background: linear-gradient(60deg, rgba(113,86,224, .8), rgba(134,198,208, .8)), url(../img/map.png)
+    div
+        margin: auto
+        width: 90%
+        text-align: center
+        .main_text-maps_item
+
+            margin: 18px
+            font-size: 14px
+            letter-spacing: 1px
+            line-height: 32px
+            text-transform: uppercase
+            color: #fff
+            font-weight: 700
+            font-family: "Maven Pro"
+        p:nth-child(2)
+            font-size: 60px
+            letter-spacing: -2px
+            line-height: 72px
+            color: #ffffff
+            font-weight: 500
+            font-family: "Maven Pro"
+            text-align: center
+
+    .main_text_maps_link
+        margin: 0
+        padding: 0
+        display: flex
+        justify-content: center
+        flex-direction: row
+        gap: 10px
+        +media(320px)
+            flex-direction: column
+            margin: 16px
+        +media(1024px)
+            flex-direction: unset
+
+.main_text_maps_button
+
+    display: flex
+    width: 20%
+    display: block
+    font-size: 12px
+    letter-spacing: 1px
+    line-height: 32px
+    text-transform: uppercase
+    font-weight: 700
+    font-family: "Maven Pro"
+    text-decoration: none
+    padding: 10px 32px
+    border-radius: 25px
+    background-color: #fff
+    transition: 0.3s
+    +media(320px)
+        width: 100%
+    +media(1024px)
+        width: 25%
+    &:hover
+        background-color: #6e45e2
+        color: #fff
+        transition: 0.5s
+
+.footer
+    flex-direction: row
+    display: flex
+    justify-content: space-between
+    padding: 25px 40px
+    text-align: center
+    // &::before
+    //     span
+    //     span
+    +media(320px)
+        flex-direction: column
+        gap: 15px
+
+    +media(1024px)
+        flex-direction: unset
+
+    .header_title
+        display: flex
+        justify-content: space-between
+        align-items: center
+        gap: 17px
+        +media(320px)
+            flex-direction: column
+            margin: 10px
+        +media(1024px)
+            flex-direction: unset
+
+        .header_line_text
+            color: #37374a
+            font-family: "Maven Pro"
+    .header-subtitle
+        display: flex
+        gap: 27px
+        align-items: center
+        +media(320px)
+            flex-direction: column
+        +media(768px)
+            flex-direction: row
+            justify-content: center
+        +media(1024px)
+            flex-direction: unset
+        a
+            color: #37374a
+            font-weight: 500
+            font-family: "Maven Pro"
+            &:hover
+                color: #6e45e2
+                transition: 0.5s
+        .button
+            border: 1px solid #37374a
+            &:hover
+                background-color: #6e45e2
+                color: #ffffff
+                transition: 0.5s
+
+.footer_social
+    padding: 26px 33px
+    +media(320px)
+        flex-direction: column
+        display: flex
+        gap: 10px
+        text-align: center
+    +media(1024px)
+        flex-direction: unset
+        display: flex
+        justify-content: space-between
+    p
+        opacity: 0.502
+        font-size: 14px
+        line-height: 19px
+        color: #6a6a77
+        font-weight: 500
+        font-family: "Maven Pro"
+    .footer_social_link
+        flex-direction: row
+        display: flex
+        gap: 10px
+        align-items: center
+        +media(320px)
+            text-align: center
+            width: 52%
+            justify-content: center
+        +media(1024px)
+            justify-content: right
+        &_item
+            justify-content: right
+            display: flex
+hr
+    opacity: 0.200
+    border: none
+    border-top: 1px solid #bdbdc2
+span
+    font-size: 25px
+
+@import components/header
+@import components/footer
