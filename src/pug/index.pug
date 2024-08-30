@@ -39,25 +39,27 @@ html(lang="uk")
 
         main
             .main
+                .wrapper 
 
-                .main_button_plan
-                    p.main_button_plan_title MISOCIAL
-                    p.main_button_plan_logo Select a Plan
-                    p.main_button_plan_sub-title Lorem ipsum dolor sit amet, consectetur adipisicing <br> elit, sed do eiusmod tempor incididunt ut.   
+                    .main_button_plan
+                        p.main_button_plan_title MISOCIAL
+                        p.main_button_plan_logo Select a Plan
+                        p.main_button_plan_sub-title Lorem ipsum dolor sit amet, consectetur adipisicing <br> elit, sed do eiusmod tempor incididunt ut.   
 
-            .main_theme
-                +card("dollars0", "img/free-plan.png", "20") 
-                +card("dollars1", "img/dollars-plan1.png", "29")
-                +card("dollars2", "img/dollars-plan2.png", "49")  
-            .main_text-maps 
-                div
-                    .main_text-maps_item
-                        p.main__text-maps-title SOCAL MARKETING & ANALYTICS
-                        p.main__text-maps-subtitle Take control of your data
-                div 
-                    .main_text_maps_link 
-                        a.main_text_maps_button(href="#") get started
-                        a.main_text_maps_button(href="#") explore features
+                    .main_theme
+                        +card("dollars0", "img/free-plan.png", "20") 
+                        +card("dollars1", "img/dollars-plan1.png", "29")
+                        +card("dollars2", "img/dollars-plan2.png", "49")  
+                .main_text-maps
+                    .wrapper  
+                        div
+                            .main_text-maps_item
+                                p.main__text-maps-title SOCAL MARKETING & ANALYTICS
+                                p.main__text-maps-subtitle Take control of your data
+                        div 
+                            .main_text_maps_link 
+                                a.main_text_maps_button(href="#") get started
+                                a.main_text_maps_button(href="#") explore features
 
 .footer 
     +menu 

@@ -12,8 +12,13 @@
     kground-size: cover
     background-position: centerbac
 .wrapper
+    width: 90%
     +media(320px)
         flex-direction: column
+    +media(325px)
+        width: 75%
+    +media(768px)
+        width: 90%
 .header_line
     display: flex
     justify-content: space-between
@@ -159,23 +164,7 @@
     color: #fff
     font-weight: 700
     font-family: "Maven Pro"
-    &:before
-        content: ''
-        position: absolute
-        top: 50%
-        left: -10px
-        width: 24px
-        height: 1px
-        background-color: #fff
 
-    &:after
-        content: ''
-        position: absolute
-        top: 50%
-        right: -10px
-        width: 24px
-        height: 1px
-        background-color: #fff
 
 .header_theme__logo
     height: 112px
@@ -262,7 +251,8 @@ figure.main_theme_islands_item_free
     border-radius: 25px
     border: 0.5px solid #c0c0c0
     +media(320px)
-        width: 130%
+        width: 170%
+    
     +media(768px)
         width: 100%
 
@@ -360,6 +350,8 @@ figure.main_theme_islands_item_free
         +media(320px)
             flex-direction: column
             margin: 16px
+        +media(768px)
+            align-items: center
         +media(1024px)
             flex-direction: unset
 
@@ -381,6 +373,8 @@ figure.main_theme_islands_item_free
     transition: 0.3s
     +media(320px)
         width: 100%
+    +media(768px)
+        width: 50%
     +media(1024px)
         width: 25%
     &:hover
@@ -433,7 +427,9 @@ figure.main_theme_islands_item_free
             color: #37374a
             font-weight: 500
             font-family: "Maven Pro"
+            transition: transform 0.3s ease, filter 0.3s ease
             &:hover
+                transform: scale(1.1)
                 color: #6e45e2
                 transition: 0.5s
         .button
@@ -475,6 +471,14 @@ figure.main_theme_islands_item_free
         &_item
             justify-content: right
             display: flex
+    .footer_social_link_item
+        a
+        transition: transform 0.3s ease, filter 0.3s ease
+
+        &:hover
+            transform: scale(1.2)
+            filter: drop-shadow(2px 4px 6px black)
+
 hr
     opacity: 0.200
     border: none
