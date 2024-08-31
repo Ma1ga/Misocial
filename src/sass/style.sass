@@ -73,6 +73,7 @@
     align-items: center
     gap: 17px
     color: #fff
+
     +media(320px)
         flex-direction: row
         margin-bottom: 20px
@@ -148,6 +149,8 @@
         transition: 0.5s
 
 .header_theme
+    display: flex
+    justify-content: center
     padding: 50px 50px
     margin-bottom: 75px
 
@@ -162,11 +165,35 @@
     font-size: 14px
     letter-spacing: 1px
     line-height: 32px
+    position: relative
     text-transform: uppercase
     color: #fff
     font-weight: 700
     font-family: "Maven Pro"
-
+    &::before
+        content: ""
+        position: absolute
+        width: 25px
+        height: 1px
+        background-color: #fff
+        top: 18px
+        left: 40px
+        +media(320px)
+            display: none
+        +media(768px)
+            display: block
+    &::after
+        content: ""
+        position: absolute
+        width: 25px
+        height: 1px
+        background-color: #fff
+        top: 18px
+        right: 40px
+        +media(320px)
+            display: none
+        +media(768px)
+            display: block
 
 .header_theme__logo
     height: 112px
@@ -204,7 +231,6 @@ main
     flex-direction: column
     text-align: center
     margin-bottom: 60px
-
 
 .main_button_plan_title
     font-size: 14px
@@ -255,7 +281,7 @@ figure.main_theme_islands_item_free
     border: 0.5px solid #c0c0c0
     +media(320px)
         width: 100%
-    
+
     +media(768px)
         width: 100%
 
@@ -477,7 +503,7 @@ figure.main_theme_islands_item_free
             display: flex
     .footer_social_link_item
         a
-        transition: transform 0.3s ease, filter 0.3s ease
+            transition: transform 0.3s ease, filter 0.3s ease
 
         &:hover
             transform: scale(1.2)
