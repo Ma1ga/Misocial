@@ -9,8 +9,9 @@
 
 .header
     background: linear-gradient(60deg, rgba(113,86,224, .8), rgba(134,198,208, .8)), url(../img/header-background.jpg)
-    kground-size: cover
-    background-position: centerbac
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
 .wrapper
     width: 90%
     +media(320px)
@@ -73,9 +74,10 @@
     gap: 17px
     color: #fff
     +media(320px)
-        flex-direction: column
+        flex-direction: row
         margin-bottom: 20px
     +media(1024px)
+        margin-bottom: 0
         flex-direction: unset
     &
         font-family: "Maven Pro"
@@ -201,7 +203,8 @@ main
     display: flex
     flex-direction: column
     text-align: center
-    margin: 60px
+    margin-bottom: 60px
+
 
 .main_button_plan_title
     font-size: 14px
@@ -233,7 +236,7 @@ main
     display: flex
     flex-direction: row
     gap: 47px
-    margin: 60px
+    margin-bottom: 60px
     +media(320px)
         flex-direction: column
         align-items: center
@@ -251,7 +254,7 @@ figure.main_theme_islands_item_free
     border-radius: 25px
     border: 0.5px solid #c0c0c0
     +media(320px)
-        width: 170%
+        width: 100%
     
     +media(768px)
         width: 100%
@@ -404,7 +407,8 @@ figure.main_theme_islands_item_free
         align-items: center
         gap: 17px
         +media(320px)
-            flex-direction: column
+            flex-direction: row
+            justify-content: center
             margin: 10px
         +media(1024px)
             flex-direction: unset
