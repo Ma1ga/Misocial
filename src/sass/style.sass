@@ -10,7 +10,7 @@
 .header
     background: linear-gradient(60deg, rgba(113,86,224, .8), rgba(134,198,208, .8)), url(../img/header-background.jpg)
     background-size: cover
-    background-position: center
+    background-position: top
     background-repeat: no-repeat
 .wrapper
     width: 90%
@@ -151,7 +151,7 @@
 .header_theme
     display: flex
     justify-content: center
-    padding: 50px 50px
+    padding: 110px 54px
     margin-bottom: 75px
 
 .header_theme__text
@@ -238,6 +238,7 @@ main
     line-height: 32px
     text-transform: uppercase
     font-weight: 700
+    color: #9fa4af
     font-family: "Maven Pro"
 
 .main_button_plan_logo
@@ -311,6 +312,7 @@ figure.main_theme_islands_item_free
         font-family: "Maven Pro"
 
     .main_theme_islands_item_free_price
+        position: relative
         font-size: 30px
         letter-spacing: -2px
         line-height: 72px
@@ -318,6 +320,12 @@ figure.main_theme_islands_item_free
         font-weight: 500
         font-family: "Maven Pro"
         text-align: center
+        &::before
+            content: "$"
+            position: absolute
+            font-size: 16px
+            left: -12px
+            top: 13px
 
     .main_theme_islands_item_free_text
         font-size: 16px
@@ -326,9 +334,10 @@ figure.main_theme_islands_item_free
         font-weight: 400
         font-family: "Maven Pro"
         text-align: center
+        margin-bottom: 58px
 
     .main_theme_islands_item_free_buy
-        padding: 20px 53px
+        padding: 17px 53px
         font-size: 12px
         letter-spacing: 1px
         line-height: 32px
@@ -402,6 +411,7 @@ figure.main_theme_islands_item_free
     border-radius: 25px
     background-color: #fff
     transition: 0.3s
+    color: #c2c9db
     +media(320px)
         width: 100%
     +media(768px)
