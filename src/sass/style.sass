@@ -258,12 +258,14 @@ main
     font-family: "Maven Pro"
     text-align: center
     text-decoration: none
-
+#{price}
+    font-size: 60px
 .main_theme
     display: flex
     flex-direction: row
     gap: 47px
     margin-bottom: 60px
+    justify-content: center
     +media(320px)
         flex-direction: column
         align-items: center
@@ -286,7 +288,7 @@ figure.main_theme_islands_item_free
     +media(768px)
         width: 100%
     +media(1400px)
-        width: 75%
+        width: 25%
 
     &:hover
         filter: drop-shadow(0 0 46px rgba(204,204,223,0.71))
